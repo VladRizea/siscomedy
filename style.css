@@ -17,44 +17,53 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
   height: 100%;
   width: 100%;
   color: black;
-
-
   }
 
+  .buffer{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+  }
 
-.content-inner-wrapper{
+.title-part{
+  top: 0;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  min-height: 100vh;
-  height: auto;
+  flex-direction: column;
+  }
+
+.content-inner-wrapper{
+  position: absolute;
   z-index: 1;
-  background-color: silver;
-  background-image: linear-gradient(335deg, #5F5053 23px, transparent 23px),
-  linear-gradient(155deg, #5F5053 23px, transparent 23px),
-  linear-gradient(335deg, #5F5053 23px, transparent 23px),
-  linear-gradient(155deg, #5F5053 23px, transparent 23px);
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(144, 144, 144);
+  background-image: linear-gradient(335deg, #414141 23px, transparent 23px),
+  linear-gradient(155deg, #414141 23px, transparent 23px),
+  linear-gradient(335deg, #414141 23px, transparent 23px),
+  linear-gradient(155deg, #414141 23px, transparent 23px);
   background-size: 58px 58px;
   background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;  
   display: none;
 }
 
-.content-inner{
 
-
-}
 /* Butoane */
 
-.button-section{
+.intro-section{
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
   z-index: 100;
 }
 
@@ -243,13 +252,75 @@ button:hover {
 
 .overlay {
   display: block;
-  position: absolute;
+  position: fixed;
   color: white;
   top: 0%;
   left: 0%;
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   background: linear-gradient(to top, rgba(2, 2, 2, 0) 0vh, black 100vh);
   transition: opacity 3s ease;
+  z-index: 20;
+}
+
+/* Neoane */
+
+.circle-neon{
+  height: 35vw;
+  width: 35vw;
+  background-color: #8b0023;
+  border-radius: 1000px;
+  position: absolute;
+}
+
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 6vw;
+  line-height: 6vw;
+  text-shadow: 0 0 3vw #F40A35;
+  transform: rotate(-10deg);
+  padding-left: 3vw;
+  top: 0;
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 10vw;
+  line-height: 10vw;
+  text-shadow: 0 0 3vw #2356FF;
+  text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+  color: #28D7FE;
+  transform: rotate(-10deg);
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
 }
 
