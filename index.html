@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class=content>
+        <div class="content-inner-wrapper">
+            <div class="content-inner">
+ 
+                <div class="testtt">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="button-section">
+            <ul>
+                <button class=" button-style-1" onclick="button();">Descoperă</button>
+                <br>
+                <button class=" button-style-2">Înscriere</button>
+            </ul>
+        </div>
+    </div>
+    <div class="curtainBody">
+        <div id="leftCurtain" class="curtainContainer">
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+        </div>
+        <div id="rightCurtain" class="curtainContainer">
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+            <div class="unCurtain"></div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+</body>
+<script>
+
+    function slide() {
+	document.getElementsByClassName("curtainContainer")[0].style.transform =
+		"translatex(-150vw) ";
+	document.getElementsByClassName("curtainContainer")[1].style.transform =
+		"translatex(150vw)";
+    }
+    function button(){
+        slide()
+        document.getElementsByClassName("content-inner-wrapper")[0].style.display = "flex";
+        document.getElementsByClassName("button-style-1")[0].classList.add("fade-out");
+        document.getElementsByClassName("button-style-2")[0].classList.add("fade-out");
+        setTimeout(function(){document.getElementsByClassName("button-style-1")[0].style.display = "none"}, 2000)
+        setTimeout(function(){document.getElementsByClassName("button-style-2")[0].style.display = "none"}, 2000)
+
+    }
+
+
+
+</script>
+</html>
