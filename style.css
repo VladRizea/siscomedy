@@ -22,11 +22,6 @@
   color: black;
   }
 
-  .buffer{
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-  }
 
 .title-part{
   top: 0;
@@ -324,3 +319,41 @@ button:hover {
   }
 }
 
+
+/* ATRIBUTE SPECIFICE TELEFON */
+
+@media only screen and (max-width: 768px) {
+
+  /* Neoane Telefon */
+
+  .circle-neon{
+    height: 45vw;
+    width: 45vw;
+    background-color: #8b0023;
+    border-radius: 1000px;
+    position: absolute;
+  }
+
+  .neon {
+    font-family: neon;
+    color: #FB4264;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw #F40A35;
+    transform: rotate(-10deg);
+    padding-left: 3vw;
+    top: 0;
+  }
+
+  .flux {
+    font-family: neon;
+    color: #426DFB;
+    font-size: 15vw;
+    line-height: 10vw;
+    text-shadow: 0 0 3vw #2356FF;
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+    transform: rotate(-10deg);
+  }
+
+} 
