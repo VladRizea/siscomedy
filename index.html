@@ -5,26 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>SisComedy</title>
+    <script src="./scripts/form.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>SiSComedy</title>
 </head>
 <body>
-    <div class="content-inner-wrapper">
+    <div id="about-page" class="content-inner-wrapper">
         <div class="title-part">
 
             <div class="circle-neon"> </div>
 
-            <div class="flux">SisComedy</div>
+            <div class="flux">SiSComedy</div>
             <div class="neon">Stand-Up night </div>
 
         </div>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+        mircea <br>
+    </div>
+    <div id="form-page" class="content-inner-wrapper">
+        <div class="form-wrapper">
+            <form id="register_form" >
+                <name="register_form" id="register_form" enctype="multipart/form-data">
+                    <h2 class="neon form-title">Inscriere </h2>
+                    <br>
+    
+                    <div id="errors-container" class="errors-container"></div>
+    
+                    <div class="input-field">
+                        <label for="nume">Nume
+                            
+                        </label>
+                        <br>
+                        <input type="text" id="nume" name="nume" class="form-control validate"><br></br>
 
+                    </div>
+    
+                    <div class="input-field">
+                        <label for="prenume">Prenume
+                            
+                        </label>
+                        <br>
+                        <input type="text" id="prenume" name="prenume" class="form-control validate"><br></br>
+  
+                    </div>
+    
+                    <div class="input-field">
+                        <label for="telefon">Telefon
+                            
+                        </label>
+                        <br>
+                        <input type="text" id="telefon" name="telefon" class="form-control validate"><br></br>
+
+                    </div>
+    
+                    <div class="input-field">
+                        <label for="email">Email             
+                        </label>
+                        <br>
+                        <input type="text" id="email" name="email" class="form-control validate"><br></br>
+                    </div>
+                    <input type="submit" name="submit" id="regbutton" class="button-style-1 " value="Înscriere">
+            </form>
+        </div>
     </div>
 
+    <div id="back-button" onclick="back()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </div>
+    <div class="intro-overlay"></div>
     <div class="intro-section">
+        <div class="title-wrapper">
+            <p class="title-spotlight"> Urmează: <br> SiSComedy</p>
+        </div>
+       
+        
         <ul>
-            <button class=" button-style-1" onclick="button();">Descoperă</button>
+            <button class=" button-style-1" onclick="aboutPage();">Descoperă</button>
             <br>
-            <button class=" button-style-2" onclick="button();">Înscriere</button>
+            <button class=" button-style-2" onclick="formPage();">Înscriere</button>
         </ul>
     </div>
 
@@ -64,18 +151,49 @@
 
     function slide() {
 	document.getElementsByClassName("curtainContainer")[0].style.transform =
-		"translatex(-150vw) ";
+		"translatex(-50vw) ";
 	document.getElementsByClassName("curtainContainer")[1].style.transform =
-		"translatex(150vw)";
+		"translatex(50vw)";
+    }
+    function slideBack() {
+	document.getElementsByClassName("curtainContainer")[0].style.transform =
+		"translatex(-10vw) ";
+	document.getElementsByClassName("curtainContainer")[1].style.transform =
+		"translatex(10vw)";
+    }
+
+    function back(){
+        
+        slideBack()
+        setTimeout(function(){
+        document.getElementsByClassName("intro-section")[0].style.display = "flex"
+
+        document.getElementsByClassName("intro-section")[0].classList.add("fade-in");
+        document.getElementsByClassName("intro-section")[0].classList.remove("fade-out");
+        }, 2000)
+        
+        document.getElementById("back-button").style.display = "none"
     }
     function button(){
         slide()
-        document.getElementsByClassName("content-inner-wrapper")[0].style.display = "flex";
-        document.getElementsByClassName("button-style-1")[0].classList.add("fade-out");
-        document.getElementsByClassName("button-style-2")[0].classList.add("fade-out");
-        setTimeout(function(){document.getElementsByClassName("button-style-1")[0].style.display = "none"}, 2000)
-        setTimeout(function(){document.getElementsByClassName("button-style-2")[0].style.display = "none"}, 2000)
+        document.getElementById("back-button").style.display = "flex"
 
+        document.getElementsByClassName("intro-section")[0].classList.add("fade-out");
+        document.getElementsByClassName("intro-section")[0].classList.remove("fade-in");
+        setTimeout(function(){document.getElementsByClassName("intro-section")[0].style.display = "none"}, 2000)
+
+    }
+
+    function aboutPage(){
+        document.getElementById("about-page").style.display = "flex";
+        document.getElementById("form-page").style.display = "none";
+        button();
+    }
+    function formPage(){
+        console.log("2")
+        document.getElementById("form-page").style.display = "flex";
+        document.getElementById("about-page").style.display = "none";
+        button();
     }
 
 

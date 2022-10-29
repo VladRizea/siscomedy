@@ -1,9 +1,6 @@
 
-.testtt{
-  height: 100px;
-  width: 100px;
-  background-color: red;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 
 * {
   padding: 0px;
@@ -54,6 +51,7 @@
 
 .intro-section{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -63,6 +61,7 @@
 }
 
 .button-style-1 {
+  font-family: 'Josefin Sans', sans-serif;
   box-sizing: border-box;
   margin: 20px;
   padding: 0 10px 0 10px;
@@ -70,7 +69,7 @@
   height: 44px;
   border: none;
   border-radius: 10px;
-  background-color: hsl(0, 92%, 38%);
+  background-color: #8b0023;
   background-image: linear-gradient(top, hsl(0, 92%, 58%) 0%, hsl(0, 92%, 43%) 40%, hsl(0, 92%, 38%) 80%, hsl(0, 92%, 46%) 100%);
   box-shadow: inset 0 1px 1px hsla(0, 0%, 100%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.8), 0 1px 0 4px hsla(0, 0%, 100%, 0.15), 0 0 0 4px hsla(220, 8%, 10%, 0.8);
   color: #fff;
@@ -110,7 +109,9 @@ button:hover {
 
 .fade-out {
   animation: fadeOut ease 2s;
-
+}
+.fade-in {
+  animation: fadeIn ease 2s;
 }
 @keyframes fadeOut {
   0% {
@@ -120,16 +121,25 @@ button:hover {
     opacity:0;
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
 /* Cortine */
 
 .curtainBody {
   overflow: hidden;
   display: block;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 50;
+  pointer-events: none;
 }
 
 .curtainContainer {
@@ -256,6 +266,7 @@ button:hover {
   background: linear-gradient(to top, rgba(2, 2, 2, 0) 0vh, black 100vh);
   transition: opacity 3s ease;
   z-index: 20;
+  pointer-events: none;
 }
 
 /* Neoane */
@@ -327,8 +338,8 @@ button:hover {
   /* Neoane Telefon */
 
   .circle-neon{
-    height: 45vw;
-    width: 45vw;
+    height: 40vw;
+    width: 40vw;
     background-color: #8b0023;
     border-radius: 1000px;
     position: absolute;
@@ -337,8 +348,8 @@ button:hover {
   .neon {
     font-family: neon;
     color: #FB4264;
-    font-size: 9vw;
-    line-height: 9vw;
+    font-size: 6vw;
+    line-height: 6vw;
     text-shadow: 0 0 3vw #F40A35;
     transform: rotate(-10deg);
     padding-left: 3vw;
@@ -348,7 +359,7 @@ button:hover {
   .flux {
     font-family: neon;
     color: #426DFB;
-    font-size: 15vw;
+    font-size: 12vw;
     line-height: 10vw;
     text-shadow: 0 0 3vw #2356FF;
     text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
@@ -357,3 +368,123 @@ button:hover {
   }
 
 } 
+
+
+/* Form */
+
+.form-wrapper{
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+  color: white
+}
+
+.input-field{
+  margin: 5px 0;
+}
+.input-field input{
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 4px;
+}
+.input-field label{
+  font-size: 25px;
+}
+.form-title{
+  font-size: 50px;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+input:focus{
+  outline: black solid 2px;
+}
+
+#register_form{
+  background-color: #8b0023;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  
+}
+
+.form-button{
+  border-style: none ;
+  padding: 0;
+  font-size: 25px;
+  padding: 7px;
+  border-radius: 4px;
+  background-color: #FED128;
+  font-weight: bold;
+}
+.form-button:hover{
+  cursor: pointer;
+  outline: black solid 2px;
+}
+
+/* Back button */
+
+#back-button{
+  color: white;
+  font-size: 50px;
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  top: 30px;
+  left: 30px;
+  z-index: 51;
+  border-radius: 1000px;
+  background-color: #8b0023;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 5px;
+}
+
+#back-button:hover{
+  cursor: pointer;
+}
+
+
+/* First page title */
+
+.title-spotlight {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 6vw;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.title-wrapper{
+  background-color: #8b0023;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: inset 0 1px 1px hsla(0, 0%, 100%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.8), 0 1px 0 4px hsla(0, 0%, 100%, 0.15), 0 0 0 4px hsla(220, 8%, 10%, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+  .title-spotlight {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 14vw;
+    padding: 10px;
+    font-weight: bold;
+  }
+}
