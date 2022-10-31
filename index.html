@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="./scripts/form.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>SiSComedy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div id="about-page" class="content-inner-wrapper">
@@ -139,29 +140,58 @@
             <div class="unCurtain"></div>
         </div>
         <div id="rightCurtain" class="curtainContainer">
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
-            <div class="unCurtain"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
+            <div class="unCurtain cc"></div>
         </div>
         <div class="overlay"></div>
     </div>
 </body>
 <script>
+    window.onload = function () {
+        // anime({
+        // targets: '.unCurtain',
+        // rotate: '-6deg',
+        // duration: 750,
+        // loop: true,
 
+        // direction: 'alternate',
+        // });
+        // anime({
+        // targets: '.cc',
+        // rotate: '-6deg',
+        // duration: 750,
+        // loop: true,
+        // delay: 400,
+        // direction: 'alternate',
+        // });
+
+    }
     function slide() {
-	document.getElementsByClassName("curtainContainer")[0].style.transform =
-		"translatex(-50vw) ";
-	document.getElementsByClassName("curtainContainer")[1].style.transform =
-		"translatex(50vw)";
+	// document.getElementsByClassName("curtainContainer")[0].style.transform =
+	// 	"translatex(-50vw) ";
+	// document.getElementsByClassName("curtainContainer")[1].style.transform =
+	// 	"translatex(50vw)";
+
+        anime({
+            targets: '#rightCurtain',
+            translateX: '50vw'
+        });
+        anime({
+            targets: '#leftCurtain',
+            translateX: '-50vw'
+        });
+
+
     }
     function slideBack() {
 	document.getElementsByClassName("curtainContainer")[0].style.transform =

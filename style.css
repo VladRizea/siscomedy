@@ -151,7 +151,7 @@ button:hover {
   margin: auto;
   transform-style: preserve-3d;
   overflow: hidden;
-  transition: transform 6s ease;
+  transition: transform 4s ease;
 }
 
 .curtainContainer:nth-child(1) {
