@@ -1,6 +1,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 
 * {
   padding: 0px;
@@ -300,6 +319,8 @@ button:hover {
   transform: rotate(-10deg);
   padding-left: 3vw;
   top: 0;
+  text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+  color: #FED128;
 }
 
 .flux {
@@ -322,12 +343,10 @@ button:hover {
 @keyframes neon {
   0%,
   100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
+    opacity: 1;
   }
   50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
-    color: #806914;
+    opacity: 0.4;
   }
 }
 
@@ -351,6 +370,10 @@ button:hover {
 
 @media only screen and (max-width: 768px) {
 
+  .scroll-icon{
+    bottom: 30vw;
+  }
+
   /* Neoane Telefon */
 
   .circle-neon{
@@ -370,6 +393,8 @@ button:hover {
     transform: rotate(-10deg);
     padding-left: 3vw;
     top: 0;
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
   }
 
   .flux {
