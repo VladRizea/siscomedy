@@ -205,6 +205,7 @@ button:hover {
   background: repeating-linear-gradient(to left, #dd3232 4vw, #911818 12vw, #ec8989 15vw);
   transform-origin: 0 0%;
   transition: transform 4s ease;
+  animation: swing 2s ease infinite;
 }
 
 /* Animatie cortine */

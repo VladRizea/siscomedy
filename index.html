@@ -165,10 +165,7 @@
 		"translatex(-50vw) ";
 	document.getElementsByClassName("curtainContainer")[1].style.transform =
 		"translatex(50vw)";
-	document.getElementsByClassName("curtainContainer")[0].style.transform =
-		"translatex(-50vw) ";
-	document.getElementsByClassName("curtainContainer")[1].style.transform =
-		"translatex(50vw)";
+
 
     }
     function slideBack() {
@@ -176,10 +173,13 @@
 		"translatex(-10vw) ";
 	document.getElementsByClassName("curtainContainer")[1].style.transform =
 		"translatex(10vw)";
+
     }
 
     function back(){
-        
+
+
+
         slideBack()
         setTimeout(function(){
         document.getElementsByClassName("intro-section")[0].style.display = "flex"
@@ -197,6 +197,8 @@
         document.getElementsByClassName("intro-section")[0].classList.add("fade-out");
         document.getElementsByClassName("intro-section")[0].classList.remove("fade-in");
         setTimeout(function(){document.getElementsByClassName("intro-section")[0].style.display = "none"}, 2000)
+
+
 
     }
 
