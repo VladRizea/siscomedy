@@ -21,10 +21,11 @@
 
 
 .title-part{
+  overflow: hidden;
   top: 0;
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 99vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -560,6 +561,7 @@ input:focus{
     font-size: 30px;
     padding-left: 0;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
   .button-style-1 {
 
