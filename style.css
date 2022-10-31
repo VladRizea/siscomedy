@@ -405,6 +405,8 @@ input:focus{
 }
 
 #register_form{
+  box-shadow: inset 0 1px 1px hsla(0, 0%, 100%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.8), 0 1px 0 4px hsla(0, 0%, 100%, 0.15), 0 0 0 4px hsla(220, 8%, 10%, 0.8);
+
   background-color: #8b0023;
   border-radius: 20px;
   display: flex;
@@ -424,6 +426,7 @@ input:focus{
   background-color: #FED128;
   font-weight: bold;
 }
+
 .form-button:hover{
   cursor: pointer;
   outline: black solid 2px;
@@ -479,6 +482,37 @@ input:focus{
 }
 
 
+
+
+
+.text-sign{
+  font-size: 39px;
+}
+
+.flex-responsive-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  margin: 0 auto;
+  
+}
+
+.about-page-box{
+  width: 40vw;
+  color: white;
+  padding: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  margin: 50px 70px;
+}
+.big-text-icon{
+  font-size: 20vw;
+  transform: rotate(0deg);
+}
+
+
 @media only screen and (max-width: 768px) {
   .title-spotlight {
     font-family: 'Josefin Sans', sans-serif;
@@ -486,5 +520,47 @@ input:focus{
     font-size: 14vw;
     padding: 10px;
     font-weight: bold;
+  }
+
+  .flex-responsive-center{
+
+    flex-direction: column !important;
+
+  }
+
+  .about-page-box{
+    width: 50vw;
+    font-size: 20px;
+    margin: 70px 0 ;
+  }
+
+  .input-field input{
+    width: 50vw;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 4px;
+  }
+  
+  .form-title{
+    font-size: 30px;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  .button-style-1 {
+
+    width: 70vw;
+
+    
+  }
+  .button-style-2 {
+
+    width: 70vw;
+   
+  }
+
+  #register_form{
+    width: 80vw;
+    padding:10px;
+    
   }
 }
