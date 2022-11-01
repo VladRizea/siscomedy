@@ -24,6 +24,11 @@
 * {
   padding: 0px;
   margin: 0px;
+  
+}
+
+body{
+  overflow-x:hidden;
 }
 
 /* Continut */
@@ -44,7 +49,8 @@
   top: 0;
   position: relative;
   height: 100vh;
-  width: 99vw;
+  width: 100vw;
+  max-width:100%;  /* added */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -494,6 +500,8 @@ input:focus{
   align-items: center;
   font-family: 'Josefin Sans', sans-serif;
   padding: 5px;
+  box-shadow: inset 0 3px 3px hsla(0, 0%, 100%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.8), 0 1px 0 4px hsla(0, 0%, 100%, 0.15), 0 0 0 4px hsla(220, 8%, 10%, 0.8);
+
 }
 
 #back-button:hover{

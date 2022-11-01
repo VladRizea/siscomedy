@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="./scripts/form.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>SiSComedy</title>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 </head>
 <body>
     <div id="about-page" class="content-inner-wrapper">
@@ -160,11 +163,34 @@
 </body>
 <script>
 
+document.querySelector('#regbutton').addEventListener("click", (e) => {
+    e.preventDefault();
+    toastr.remove()
+    const rezervare = {
+        nume: document.querySelector('#nume').value,
+        prenume: document.querySelector('#prenume').value,
+        telefon: document.querySelector('#telefon').value,
+        email: document.querySelector('#email').value,
+    }
+    axios.post('/inscriere', rezervare)
+        .then((response) => {
+            toastr.success("Te-ai inscris cu succes!");
+        })
+        .catch((error) => {
+            const values = Object.values(error.response.data)
+            console.log(error);
+            values.map(item => {
+                toastr.error(item)
+            })
+        })
+
+}, false)
+
     function slide() {
 	document.getElementsByClassName("curtainContainer")[0].style.transform =
 		"translatex(-50vw) ";
 	document.getElementsByClassName("curtainContainer")[1].style.transform =
-		"translatex(50vw)";
+		"translatex(48vw)";
 
 
     }
